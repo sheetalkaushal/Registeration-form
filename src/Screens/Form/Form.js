@@ -10,7 +10,7 @@ import {
   import { style } from "../../../formstyle";
   import Input from "../../Component/Input";
   
-  export const Form=()=> {
+  export const Form=({navigation})=> {
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [rollno, setRollNo] = useState("");
@@ -36,7 +36,12 @@ import {
     }
     return (
       <ScrollView style={style.container}>
-        <Text style={style.formstyle}> REGISTRATION FORM</Text>
+        <Text style={style.formstyle}> SIGNUP FORM</Text>
+        <View style={{flexDirection:'row',justifyContent:'center'}}>
+        <Text style={{color:'blue'}}> Already have an account ?
+        </Text>
+        <TouchableOpacity onPress={()=>navigation.navigate("Login")}><Text style={{color:'brown'}}>LOGIN</Text></TouchableOpacity>
+        </View>
         <Input
           place={"Enter Your Name"}
           username={name}
@@ -102,13 +107,13 @@ import {
             height: 50,
             alignSelf: "center",
             margin: 40,
-            backgroundColor: "#7FE817",
+            backgroundColor: "green",
             justifyContent: "center",
             alignItems: "center",
           }}
           onPress={valu}
         >
-          <Text style={{ fontSize: 18, color: "black" }}>SUBMIT</Text>
+          <Text style={{ fontSize: 18, color: "white" }}>SUBMIT</Text>
         </TouchableOpacity>
       </ScrollView>
     );

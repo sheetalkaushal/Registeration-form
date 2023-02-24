@@ -2,16 +2,16 @@ import { StyleSheet } from 'react-native';
 const style = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#123456',
+        backgroundColor: '#E8E9E8',
         margin: 16,
         borderRadius: 12,
     },
     formstyle: {
         fontWeight: 'bold',
-        fontSize: 25,
+        fontSize: 28,
         alignSelf: 'center',
         marginTop: 16,
-        color: 'white'
+        color: 'red'
     },
     // formpagestyle start
     formstyle1:{
@@ -44,7 +44,7 @@ const style = StyleSheet.create({
         alignSelf:'center',
         marginTop:40,
         width:100,
-        height:100,
+        height:60,
         
     },
     // loginpage style

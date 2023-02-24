@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { View, Text ,Button,Image} from 'react-native'
+import { View, Text ,Button,Image,TouchableOpacity} from 'react-native'
 import { style } from '../../../formstyle'
 import Input from '../../Component/Input'
 
@@ -37,11 +37,16 @@ export const Login = ({navigation}) => {
     <View style={style.btnlog}>
       <Button color={'green'}  title="Login"
      onPress={values}/>
-     <View style={{marginTop:20}}>
+    </View>
+     <View style={{flexDirection:'row',justifyContent:"center"}}>
+     <View style={{width:80, marginRight:10}}>
          <Button  color={'red'} title="Go back" onPress={() => navigation.goBack()} />
          </View>
+         <View style={{ marginLeft:10}}>
+         <Button  color={'lightblue'} title="SignUp" onPress={() => navigation.navigate("Form")} />
     </View>
-
+   
+ </View>
    </View>
   )
 }
